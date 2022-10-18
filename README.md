@@ -26,7 +26,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 👤 **ANDY MENUTTI**
 
 - GitHub: [@andym80](https://github.com/andym80)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+
 - LinkedIn: [LinkedIn](https://linkedin.com/in/andres-menutti)
 
 
