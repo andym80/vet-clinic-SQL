@@ -11,6 +11,9 @@ All the information was inserted into 'animals' table classified by:
 
 I have used PostgreSQL shell and pgAdmin4 to get a graphical view to sort and manage every data. 
 
+## Tools
+PostgreSQL & pgAdmin 4
+
 
 ## Getting Started
 
