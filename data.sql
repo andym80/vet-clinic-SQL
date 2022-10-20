@@ -20,3 +20,6 @@ VALUES (5,'Charmander','2020/2/8',0,false,11),
 (9,'Boarmon','2005/6/7',7,true,20.4),
 (10,'Blossom','1998/10/13',3,true,17),
 (11,'Ditto','2022/5/14',4,true,22);
+
+
+
