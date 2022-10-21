@@ -96,4 +96,31 @@ SELECT AVG(weight_kg) AS "average weight of animals" FROM ANIMALS;
 SELECT AVG(escape_attempts) AS "average escape attempts" FROM ANIMALS WHERE date_of_birth BETWEEN '1990/01/01' AND '1999/12/31';
 SELECT MIN(weight_kg) AS "minimum weight", MAX(weight_kg) AS "maximux weight" FROM ANIMALS GROUP BY species;
 
+INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34), ('Jennifer Orwell', 19), ('Bob', 45), ('Melody Pond', 77), ('Dean Winchester', 14), ('Jodie Whittaker', 38);
+INSERT INTO species (name) VALUES ('Pokemon'), ('Digimon');
+
+UPDATE animals SET species_id =2 WHERE name LIKE '%mon';
+UPDATE animals SET species_id =1 WHERE name NOT LIKE '%mon';
+
+UPDATE animals SET owner_id = 1 WHERE name = 'Agumon';
+UPDATE animals SET owner_id = 2 WHERE name = 'Gabumon' AND name ='Pikachu';
+UPDATE animals SET owner_id = 3 WHERE name = 'Devimon' AND name ='Plantmon';
+UPDATE animals SET owner_id = 4 WHERE name = 'Charmander' AND name ='Squirtle' AND name = 'Blossom';
+UPDATE animals SET owner_id = 5 WHERE name = 'Angemon' AND name ='Boarmon';
+
+SELECT name, full_name FROM animals JOIN owners ON owner_id = 4 AND full_name = 'Melody Pond';
+
+SELECT A.name, S.name FROM animals A JOIN species S ON A.species_id =1 AND S.name ='Pokemon';
+SELECT A.name, O.full_name FROM animals A FULL JOIN owners O ON A.owner_id = O.id;
+SELECT S.name, COUNT(species_id) FROM animals A JOIN species S ON A.species_id = S.id GROUP BY S.name;
+
+SELECT * FROM ( SELECT owners.full_name as owner,
+COUNT(*) count_animals FROM animals
+RIGHT JOIN owners ON owners.id = animals.owner_id
+GROUP BY owners.full_name) AS count_animals_per_owner
+WHERE count_animals_per_owner.count_animals = (
+SELECT MAX(count_per_species) FROM (
+SELECT owners.full_name as owner,
+COUNT(*) count_per_species FROM animals RIGHT JOIN owners ON owners.id = animals.owner_id
+GROUP BY owners.full_name) AS count_animals_per_owner);
 
