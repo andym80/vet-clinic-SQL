@@ -96,6 +96,8 @@ SELECT AVG(weight_kg) AS "average weight of animals" FROM ANIMALS;
 SELECT AVG(escape_attempts) AS "average escape attempts" FROM ANIMALS WHERE date_of_birth BETWEEN '1990/01/01' AND '1999/12/31';
 SELECT MIN(weight_kg) AS "minimum weight", MAX(weight_kg) AS "maximux weight" FROM ANIMALS GROUP BY species;
 
+--changes wednesday tasks
+
 INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34), ('Jennifer Orwell', 19), ('Bob', 45), ('Melody Pond', 77), ('Dean Winchester', 14), ('Jodie Whittaker', 38);
 INSERT INTO species (name) VALUES ('Pokemon'), ('Digimon');
 
