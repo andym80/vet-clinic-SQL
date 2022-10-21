@@ -113,7 +113,15 @@ UPDATE animals SET owner_id = 5 WHERE name = 'Angemon' AND name ='Boarmon';
 SELECT name, full_name FROM animals JOIN owners ON owner_id = 4 AND full_name = 'Melody Pond';
 
 SELECT A.name, S.name FROM animals A JOIN species S ON A.species_id =1 AND S.name ='Pokemon';
+
+SELECT animals.name, animals.date_of_birth, animals.escape_attempts,  animals.neutered,  animals.weight_kg,  owners.full_name as owner, owners.age as owner_age, species.name as species
+FROM animals INNER JOIN owners ON owners.id = animals.owner_id INNER JOIN species ON species.id = animals.species_id
+WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
+
+SELECT COUNT(*) AS "number of animals ownered by Dean Winchester and never escapes" FROM animals WHERE owner_id = 5 AND escape_attempts = 0;
+
 SELECT A.name, O.full_name FROM animals A FULL JOIN owners O ON A.owner_id = O.id;
+
 SELECT S.name, COUNT(species_id) FROM animals A JOIN species S ON A.species_id = S.id GROUP BY S.name;
 
 SELECT * FROM ( SELECT owners.full_name as owner,
@@ -125,4 +133,6 @@ SELECT MAX(count_per_species) FROM (
 SELECT owners.full_name as owner,
 COUNT(*) count_per_species FROM animals RIGHT JOIN owners ON owners.id = animals.owner_id
 GROUP BY owners.full_name) AS count_animals_per_owner);
+
+
 
