@@ -1,7 +1,18 @@
-# curriculum-databases-projects-template
+# Veterinary Clinic Database  /SQL 
+I have created a relational database from a veterinary clinic. 
+All the information was inserted into 'animals' table classified by: 
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+- id
+- name
+- date of birth
+- escape_attempts
+- neutered
+- weight_Kg
+
+I have used PostgreSQL shell and pgAdmin4 to get a graphical view to sort and manage every data. 
+
+## Tools
+PostgreSQL & pgAdmin 4
 
 
 ## Getting Started
@@ -15,17 +26,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **ANDY MENUTTI**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@andym80](https://github.com/andym80)
 
-👤 **Author2**
+- LinkedIn: [LinkedIn](https://linkedin.com/in/andres-menutti)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
