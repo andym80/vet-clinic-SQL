@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS owners
     name character varying COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT owners_pkey PRIMARY KEY (id)
 );
+ALTER TABLE owners ADD COLUMN age integer;
+
 
 CREATE TABLE IF NOT EXISTS species
 (
